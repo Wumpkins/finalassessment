@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flash Cards</title>
+        <script src="angular.js"></script>
+        <script src="app.js"></script>
+        <!-- We've provided some styles for you, aren't we nice? -->
+        <link rel="stylesheet" type="text/css" href="reset.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body ng-app="final" ng-controller="MainController">
+
+    <h1> Angular Final Assessment </h1>
+    <a href="./about">About</a> <br> <br>
+
+    <ul>
+    <div ng-repeat="homework in homeworks" ng-click='showMe=true'>
+    	{{homework.assignment}} 
+    	    <div ng-show="showMe">
+    	    	Url: <a href="{{homework.url}}">{{homework.url}}</a> <br>
+    	    	Status: {{homework.status}} <br> <br>
+    	    </div>
+   	</div>
+    </ul>
+
+    </body>
+
+
+</html>
